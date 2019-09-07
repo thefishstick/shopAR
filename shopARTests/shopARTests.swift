@@ -10,9 +10,12 @@ import XCTest
 @testable import shopAR
 
 class shopARTests: XCTestCase {
+    
+    var shop_ar: shopAR!
 
     override func setUp() {
         // Put setup code here. This method is called before the invocation of each test method in the class.
+        shop_ar = shopAR()
     }
 
     override func tearDown() {
@@ -23,6 +26,14 @@ class shopARTests: XCTestCase {
         // This is an example of a functional test case.
         // Use XCTAssert and related functions to verify your tests produce the correct results.
     }
+    
+    func testAdd() {
+        XCTAssertEqual(shop_ar.add(a: 1, b: 1), 2)
+    }
+    
+    func testSubtract() {
+        XCTAssertEqual(shop_ar.sub(a: 2, b: 1), 1)
+    }
 
     func testPerformanceExample() {
         // This is an example of a performance test case.
@@ -30,5 +41,7 @@ class shopARTests: XCTestCase {
             // Put the code you want to measure the time of here.
         }
     }
+    
+    
 
 }

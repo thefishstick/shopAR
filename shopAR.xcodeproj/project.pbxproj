@@ -15,6 +15,7 @@
 		B16E023C2323768800565E56 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B16E023A2323768800565E56 /* Main.storyboard */; };
 		B16E023E2323768B00565E56 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B16E023D2323768B00565E56 /* Assets.xcassets */; };
 		B16E02412323768B00565E56 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B16E023F2323768B00565E56 /* LaunchScreen.storyboard */; };
+		B16E024723237C6700565E56 /* shopAR.swift in Sources */ = {isa = PBXBuildFile; fileRef = B16E024623237C6700565E56 /* shopAR.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -24,6 +25,13 @@
 			proxyType = 1;
 			remoteGlobalIDString = B16E02152323760000565E56;
 			remoteInfo = shopAR;
+		};
+		B16E024823237F7E00565E56 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B16E020D2323760000565E56 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B16E02332323768800565E56;
+			remoteInfo = shopARExamples;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -41,6 +49,7 @@
 		B16E023D2323768B00565E56 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B16E02402323768B00565E56 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B16E02422323768B00565E56 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B16E024623237C6700565E56 /* shopAR.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = shopAR.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +103,7 @@
 			children = (
 				B16E02192323760000565E56 /* shopAR.h */,
 				B16E021A2323760000565E56 /* Info.plist */,
+				B16E024623237C6700565E56 /* shopAR.swift */,
 			);
 			path = shopAR;
 			sourceTree = "<group>";
@@ -164,6 +174,7 @@
 			);
 			dependencies = (
 				B16E02222323760000565E56 /* PBXTargetDependency */,
+				B16E024923237F7E00565E56 /* PBXTargetDependency */,
 			);
 			name = shopARTests;
 			productName = shopARTests;
@@ -199,6 +210,7 @@
 				TargetAttributes = {
 					B16E02152323760000565E56 = {
 						CreatedOnToolsVersion = 10.3;
+						LastSwiftMigration = 1030;
 					};
 					B16E021E2323760000565E56 = {
 						CreatedOnToolsVersion = 10.3;
@@ -260,6 +272,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B16E024723237C6700565E56 /* shopAR.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -287,6 +300,11 @@
 			isa = PBXTargetDependency;
 			target = B16E02152323760000565E56 /* shopAR */;
 			targetProxy = B16E02212323760000565E56 /* PBXContainerItemProxy */;
+		};
+		B16E024923237F7E00565E56 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B16E02332323768800565E56 /* shopARExamples */;
+			targetProxy = B16E024823237F7E00565E56 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -362,7 +380,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -420,7 +438,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -435,6 +453,7 @@
 		B16E022B2323760000565E56 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -452,6 +471,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.johantodi.shopAR;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -460,6 +480,7 @@
 		B16E022C2323760000565E56 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -485,6 +506,7 @@
 		B16E022E2323760000565E56 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = QENZ5YH683;
 				INFOPLIST_FILE = shopARTests/Info.plist;
@@ -503,6 +525,7 @@
 		B16E022F2323760000565E56 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = QENZ5YH683;
 				INFOPLIST_FILE = shopARTests/Info.plist;
