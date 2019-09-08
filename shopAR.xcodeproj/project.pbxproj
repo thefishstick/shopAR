@@ -18,7 +18,7 @@
 		B16E024723237C6700565E56 /* shopAR.swift in Sources */ = {isa = PBXBuildFile; fileRef = B16E024623237C6700565E56 /* shopAR.swift */; };
 		B183DF032324AC8E00A4F55C /* shopAR.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B16E02162323760000565E56 /* shopAR.framework */; };
 		B183DF042324AC8E00A4F55C /* shopAR.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B16E02162323760000565E56 /* shopAR.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		B183DF102324BEF800A4F55C /* ARPopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B183DF082324AE4700A4F55C /* ARPopUpViewController.swift */; };
+		B183DF142324C37700A4F55C /* ARPopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B183DF082324AE4700A4F55C /* ARPopUpViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -130,6 +130,7 @@
 			children = (
 				B16E02192323760000565E56 /* shopAR.h */,
 				B16E021A2323760000565E56 /* Info.plist */,
+				B183DF082324AE4700A4F55C /* ARPopUpViewController.swift */,
 				B16E024623237C6700565E56 /* shopAR.swift */,
 			);
 			path = shopAR;
@@ -149,7 +150,6 @@
 			children = (
 				B16E02362323768800565E56 /* AppDelegate.swift */,
 				B16E02382323768800565E56 /* ViewController.swift */,
-				B183DF082324AE4700A4F55C /* ARPopUpViewController.swift */,
 				B16E023A2323768800565E56 /* Main.storyboard */,
 				B16E023D2323768B00565E56 /* Assets.xcassets */,
 				B16E023F2323768B00565E56 /* LaunchScreen.storyboard */,
@@ -309,6 +309,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B183DF142324C37700A4F55C /* ARPopUpViewController.swift in Sources */,
 				B16E024723237C6700565E56 /* shopAR.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -327,7 +328,6 @@
 			files = (
 				B16E02392323768800565E56 /* ViewController.swift in Sources */,
 				B16E02372323768800565E56 /* AppDelegate.swift in Sources */,
-				B183DF102324BEF800A4F55C /* ARPopUpViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

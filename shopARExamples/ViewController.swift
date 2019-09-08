@@ -11,13 +11,13 @@ import shopAR
 
 class ViewController: UIViewController {
 
-    @IBAction func ShowPopUp(_ sender: Any) {
-        if let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "displayARObject") as? ARPopUpViewController
-        {
-            vc.url = fileUrl
-            present(vc, animated: true, completion: nil)
-        }
-    }
+//    @IBAction func ShowPopUp(_ sender: Any) {
+//        if let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "displayARObject") as? ARPopUpViewController
+//        {
+//            vc.url = fileUrl
+//            present(vc, animated: true, completion: nil)
+//        }
+//    }
     
     var fileUrl : String = ""
     
