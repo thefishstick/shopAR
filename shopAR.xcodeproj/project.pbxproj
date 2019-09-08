@@ -16,6 +16,9 @@
 		B16E023E2323768B00565E56 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B16E023D2323768B00565E56 /* Assets.xcassets */; };
 		B16E02412323768B00565E56 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B16E023F2323768B00565E56 /* LaunchScreen.storyboard */; };
 		B16E024723237C6700565E56 /* shopAR.swift in Sources */ = {isa = PBXBuildFile; fileRef = B16E024623237C6700565E56 /* shopAR.swift */; };
+		B183DF032324AC8E00A4F55C /* shopAR.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B16E02162323760000565E56 /* shopAR.framework */; };
+		B183DF042324AC8E00A4F55C /* shopAR.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B16E02162323760000565E56 /* shopAR.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		B183DF0F2324B73100A4F55C /* ARPopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B183DF082324AE4700A4F55C /* ARPopUpViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -33,7 +36,28 @@
 			remoteGlobalIDString = B16E02332323768800565E56;
 			remoteInfo = shopARExamples;
 		};
+		B183DF052324AC8E00A4F55C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B16E020D2323760000565E56 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B16E02152323760000565E56;
+			remoteInfo = shopAR;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		B183DF072324AC8E00A4F55C /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				B183DF042324AC8E00A4F55C /* shopAR.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		B16E02162323760000565E56 /* shopAR.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = shopAR.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -50,6 +74,7 @@
 		B16E02402323768B00565E56 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B16E02422323768B00565E56 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B16E024623237C6700565E56 /* shopAR.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = shopAR.swift; sourceTree = "<group>"; };
+		B183DF082324AE4700A4F55C /* ARPopUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARPopUpViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +97,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B183DF032324AC8E00A4F55C /* shopAR.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -85,6 +111,7 @@
 				B16E02232323760000565E56 /* shopARTests */,
 				B16E02352323768800565E56 /* shopARExamples */,
 				B16E02172323760000565E56 /* Products */,
+				B183DF012324ABF200A4F55C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -104,6 +131,7 @@
 				B16E02192323760000565E56 /* shopAR.h */,
 				B16E021A2323760000565E56 /* Info.plist */,
 				B16E024623237C6700565E56 /* shopAR.swift */,
+				B183DF082324AE4700A4F55C /* ARPopUpViewController.swift */,
 			);
 			path = shopAR;
 			sourceTree = "<group>";
@@ -128,6 +156,13 @@
 				B16E02422323768B00565E56 /* Info.plist */,
 			);
 			path = shopARExamples;
+			sourceTree = "<group>";
+		};
+		B183DF012324ABF200A4F55C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -188,10 +223,12 @@
 				B16E02302323768800565E56 /* Sources */,
 				B16E02312323768800565E56 /* Frameworks */,
 				B16E02322323768800565E56 /* Resources */,
+				B183DF072324AC8E00A4F55C /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				B183DF062324AC8E00A4F55C /* PBXTargetDependency */,
 			);
 			name = shopARExamples;
 			productName = shopARExamples;
@@ -272,6 +309,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B183DF0F2324B73100A4F55C /* ARPopUpViewController.swift in Sources */,
 				B16E024723237C6700565E56 /* shopAR.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -305,6 +343,11 @@
 			isa = PBXTargetDependency;
 			target = B16E02332323768800565E56 /* shopARExamples */;
 			targetProxy = B16E024823237F7E00565E56 /* PBXContainerItemProxy */;
+		};
+		B183DF062324AC8E00A4F55C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B16E02152323760000565E56 /* shopAR */;
+			targetProxy = B183DF052324AC8E00A4F55C /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -546,6 +589,7 @@
 		B16E02442323768B00565E56 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = QENZ5YH683;
@@ -565,6 +609,7 @@
 		B16E02452323768B00565E56 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = QENZ5YH683;
