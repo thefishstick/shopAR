@@ -16,7 +16,7 @@ Pod::Spec.new do |spec|
   #
 
   spec.name         = "shopAR"
-  spec.version      = "1.4"
+  spec.version      = "1.5"
   spec.summary      = "shopAR enables retail-based iOS apps to easily integrate Augmented Reality product-viewing at the touch of a button."
 
   # This description is used to generate tags and improve search results.
