@@ -9,7 +9,7 @@
 <h3> Pod Installation </h3>
 
 1. Add the following line to the Podfile:
-	pod "ShopApp_Shopify", "~> 1.0"
+	pod "shopAR", "~> 1.5"
 2. Install the dependencies:
 	pod install
 
