@@ -11,15 +11,6 @@ import Foundation
 public final class shopAR {
     let name = "shopAR"
     
-    public func add(a: Int, b: Int) -> Int{
-        return a + b
-    }
-    
-    public func sub(a: Int, b: Int) -> Int{
-        return a - b
-    }
-    
-    
     public func fetchObject(user_id: String, file_id: String, completionHandler: @escaping (_ myUrl: String) -> ()) {
         // Object parameters in s3
         let parameters = ["user_id": user_id, "file_id": file_id]
@@ -61,13 +52,12 @@ public final class shopAR {
                 }
             } catch let error {
                 print(error.localizedDescription)
-                // Response did not provie a url
+                //no url returned
                 completionHandler("no-url-found")
             }
         }
         task.resume()
     }
-
     
     public init() {}
     

@@ -26,14 +26,6 @@ class shopARTests: XCTestCase {
         // This is an example of a functional test case.
         // Use XCTAssert and related functions to verify your tests produce the correct results.
     }
-    
-    func testAdd() {
-        XCTAssertEqual(shop_ar.add(a: 1, b: 1), 2)
-    }
-    
-    func testSubtract() {
-        XCTAssertEqual(shop_ar.sub(a: 2, b: 1), 1)
-    }
 
     func testPerformanceExample() {
         // This is an example of a performance test case.

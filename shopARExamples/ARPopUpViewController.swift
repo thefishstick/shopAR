@@ -1,13 +1,10 @@
 //
-//  ViewController.swift
-//  SimpleARKitDemo
+//  ARPopUpViewController.swift
+//  shopARExamples
 //
-//  Created by Jayven N on 29/9/2017.
-//  Copyright © 2017 AppCoda. All rights reserved.
+//  Created by Johan Todi on 2019-09-07.
+//  Copyright © 2019 GFE. All rights reserved.
 //
-
-
-
 
 // Instructions for installation:
 //    1) Drag this file into your build target (with Main.storyboard and other ViewController.swift files, etc.
@@ -101,17 +98,31 @@ public class ARPopUpViewController: UIViewController, URLSessionDelegate, URLSes
         sceneView.rightAnchor.constraint(equalTo: self.view.rightAnchor).isActive = true
         sceneView.bottomAnchor.constraint(equalTo: self.view.bottomAnchor).isActive = true
         
-        super.viewDidLoad()
         
         // Generate random file ending for downloaded .scn file so there's no overwriting
         self.file_ending = UUID().uuidString
-        print("fileending:", self.file_ending)
         
         // Begin downloading the .scn file and saving to documents
         self.downloadSceneTask(url: URL(string: url)!)
         
         // Tap gesture recognizer for adding objects to sceneview
         addTapGestureToSceneView()
+        
+        // Add dismiss button
+        let button = UIButton(frame: CGRect(x: 240, y: 660, width: 200, height: 30))
+        button.setTitle("Cancel",for: .normal)
+        button.setTitleColor(UIColor(named: "white"), for: .normal)
+        button.addTarget(self, action: #selector(self.buttonAction), for: .touchUpInside)
+        self.view.addSubview(button)
+        
+        super.viewDidLoad()
+    }
+    
+    
+    // Function for dismiss button
+    @objc func buttonAction(sender: UIButton!) {
+        dismiss(animated: true, completion: nil)
+        print("Dismissed ARPopUpVC")
     }
     
     
@@ -136,7 +147,7 @@ public class ARPopUpViewController: UIViewController, URLSessionDelegate, URLSes
     
     // Function called to place AR Object in sceneview
     public func addObject(x: Float = 0, y: Float = 0, z: Float = -0.2) {
-
+        
         // Retrieve path where file will be downloaded
         let downloadedScenePath = getDocumentsDirectory().appendingPathComponent("\(self.file_ending).scn")
         
@@ -171,6 +182,7 @@ public class ARPopUpViewController: UIViewController, URLSessionDelegate, URLSes
         // Show The Progress Bar
         DispatchQueue.main.async {
             self.loading = UIAlertController(title: nil, message: self.downloadString , preferredStyle: .alert)
+            
             let loadingIndicator = UIActivityIndicatorView(frame: CGRect(x: 10, y: 5, width: 50, height: 50))
             loadingIndicator.hidesWhenStopped = true
             loadingIndicator.style = UIActivityIndicatorView.Style.gray
