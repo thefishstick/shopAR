@@ -28,7 +28,30 @@
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
+<<<<<<< HEAD
       </Testables>
+=======
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "B16E021E2323760000565E56"
+               BuildableName = "shopARTests.xctest"
+               BlueprintName = "shopARTests"
+               ReferencedContainer = "container:shopAR.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+      </Testables>
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "B16E02152323760000565E56"
+            BuildableName = "shopAR.framework"
+            BlueprintName = "shopAR"
+            ReferencedContainer = "container:shopAR.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
+>>>>>>> a495b5dd274f30d275099acaa34e3fa69c0ad407
       <AdditionalOptions>
       </AdditionalOptions>
    </TestAction>
