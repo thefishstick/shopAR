@@ -1,4 +1,4 @@
-<h1>shopAR for iOS<\h1>
+<h1>shopAR for iOS</h2>
 
 <h2>Overview</h2>
 	
